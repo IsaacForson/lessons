@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom project</title>
+</head>
+<body>
+    <!-- first exercise -->
+    <p>YouTube Subscribe Button</p>
+    <button onclick="(Subscribe())" class="Subscribe">Subscribe</button>
+
+    <!-- second exercise -->
+     <p>Amazon shipping Calculator</p>
+        <input type="number" id="weight" placeholder="Enter weight in kg">
+        <button onclick="CalculatorTotal()" class="calculate">calculate</button>
+
+        <p class="shippingTax"></p>
+    <script>
+        // first exercise
+      /*  function Subscribe(){
+        if(document.querySelector('.Subscribe').innerHTML === 'Subscribe'){
+            document.querySelector('.Subscribe').innerHTML = 'Subscribed';
+       }else{
+        document.querySelector('.Subscribe').innerHTML = 'Subscribe';
+       }
+    } */
+
+    // second exercise
+    const tax = 10
+        function CalculatorTotal(){
+          console.log( document.querySelector('input').value);
+           const inputValue =  document.querySelector('input').value
+           if (inputValue > 40){
+            document.querySelector('.shippingTax').innerHTML = 'you shipping tax is free'
+           }else{
+           const totalCost = Number(inputValue)  + Number(tax) 
+            document.querySelector('.shippingTax').innerHTML = `your total cost is ${totalCost}`
+           }
+        }
+
+    </script>
+</body>
+</html>

@@ -7,11 +7,16 @@
 </head>
 <body>
     <button>hello</button>
+    <button class="js-button">hello</button>
     <script>
         // innerHTML can accept all valid html tags, and elements
         console.log(document.querySelector('button').innerText = '<span>Hello world</span>');
         // innerText treats everything as plain text
         console.log(document.querySelector('button').innerHTML = '<span>Hello world</span>');
+        
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        
         
       /*   document.body.innerHTML = 'hello';
        console.log( document.body);
