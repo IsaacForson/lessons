@@ -8,8 +8,14 @@
 <body>
     <button>hello</button>
     <script>
-        document.body.innerHTML = 'hello';
+        // innerHTML can accept all valid html tags, and elements
+        console.log(document.querySelector('button').innerText = '<span>Hello world</span>');
+        // innerText treats everything as plain text
+        console.log(document.querySelector('button').innerHTML = '<span>Hello world</span>');
+        
+      /*   document.body.innerHTML = 'hello';
        console.log( document.body);
+        */
        
     </script>
 </body>
